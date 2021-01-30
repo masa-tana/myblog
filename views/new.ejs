@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="/" class="header-logo">BLOG</a>
+    </header>
+    <div class="container">
+      <div class="container-header">
+        <h1>記事作成</h1>
+      </div>
+      <div class="item-form-wrapper">
+        <p class="form-label">タイトル</p>
+        <form action="/create" method="post">
+            <input type="text" name="title">
+            <p class="form-label">概要</p>
+            <input type="text" name="summary">
+            <p class="form-label">内容</p>
+            <textarea name="content" rows="4" colos="40"></textarea>
+            <p class="form-label">閲覧制限</p>            
+            <select name="category">
+                <option value="all">全員が閲覧できる</option>
+                <option value="limited">会員が閲覧できる記事</option>
+            </select>
+            <input type="submit" value="投稿する">
+        </form>
+      </div>
+      <a href="/list" class="cancel-button">もどる</a>
+    </div>
+  </body>
+</html>

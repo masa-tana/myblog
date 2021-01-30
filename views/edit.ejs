@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="/" class="header-logo">BLOG</a>
+    </header>
+    <div class="container">
+      <div class="container-header">
+        <h1>投稿記事編集</h1>
+        <a href="/list" class="cancel-button">キャンセル</a>
+      </div>
+      <div class="list-form-wrapper">
+        <p class="form-label">タイトル</p>
+        <form action="/update/<%= article.id %>" method="post">
+            <input type="text" value = "<%= article.title %>" name="title">
+            <p class="form-label">概要</p>
+            <input type="text" value = "<%= article.summary %>" name="summary">
+            <p class="form-label">内容</p>
+            <textarea name="content" rows="4" colos="40"><%= article.content %></textarea>
+            <input type="submit" value="更新する">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
