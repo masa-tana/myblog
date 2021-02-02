@@ -9,10 +9,10 @@ app.use(express.urlencoded({extended: false}));
 
 // mysql.connection
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'masa2525',
-    database: 'list_app'
+    host: 'us-cdbr-east-03.cleardb.com',
+    user: 'ba1f96fe42c50b',
+    password: '34f13531',
+    database: 'heroku_5cf9348bfd28492'
 });
 
 // express-session
